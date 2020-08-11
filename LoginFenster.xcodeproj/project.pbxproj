@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,16 @@
 		C659FF2424DE81AC0093BBC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C659FF2224DE81AC0093BBC1 /* Main.storyboard */; };
 		C659FF2624DE81AD0093BBC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C659FF2524DE81AD0093BBC1 /* Assets.xcassets */; };
 		C659FF2924DE81AD0093BBC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C659FF2724DE81AD0093BBC1 /* LaunchScreen.storyboard */; };
+		C67F9C7724E16DC300C21388 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C67F9C7624E16DC300C21388 /* GoogleService-Info.plist */; };
+		C681E4FA24E15F220061B7B7 /* KartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681E4F924E15F220061B7B7 /* KartViewController.swift */; };
+		E2D8F05908E47EAE1DFCD6A5 /* Pods_LoginFenster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBA27838EF5CC58A6B0726E /* Pods_LoginFenster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D6FF5BEFFF31BCAD0128100 /* Pods-LoginFenster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginFenster.debug.xcconfig"; path = "Target Support Files/Pods-LoginFenster/Pods-LoginFenster.debug.xcconfig"; sourceTree = "<group>"; };
+		388BBEB3A83D17CC50DEFC11 /* Pods-LoginFenster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginFenster.release.xcconfig"; path = "Target Support Files/Pods-LoginFenster/Pods-LoginFenster.release.xcconfig"; sourceTree = "<group>"; };
+		9FBA27838EF5CC58A6B0726E /* Pods_LoginFenster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginFenster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6519ED324E269E3005864AE /* LoginFenster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginFenster.entitlements; sourceTree = "<group>"; };
 		C659FF1924DE81AC0093BBC1 /* LoginFenster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginFenster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C659FF1C24DE81AC0093BBC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C659FF1E24DE81AC0093BBC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,8 @@
 		C659FF2524DE81AD0093BBC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C659FF2824DE81AD0093BBC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C659FF2A24DE81AD0093BBC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C67F9C7624E16DC300C21388 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C681E4F924E15F220061B7B7 /* KartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +40,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D8F05908E47EAE1DFCD6A5 /* Pods_LoginFenster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C276800D91E13E325AEAF11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D6FF5BEFFF31BCAD0128100 /* Pods-LoginFenster.debug.xcconfig */,
+				388BBEB3A83D17CC50DEFC11 /* Pods-LoginFenster.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C659FF1024DE81AC0093BBC1 = {
 			isa = PBXGroup;
 			children = (
 				C659FF1B24DE81AC0093BBC1 /* LoginFenster */,
 				C659FF1A24DE81AC0093BBC1 /* Products */,
+				7C276800D91E13E325AEAF11 /* Pods */,
+				D2365DD5E71E17AF2F5ACAAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +77,26 @@
 		C659FF1B24DE81AC0093BBC1 /* LoginFenster */ = {
 			isa = PBXGroup;
 			children = (
+				C6519ED324E269E3005864AE /* LoginFenster.entitlements */,
 				C659FF1C24DE81AC0093BBC1 /* AppDelegate.swift */,
 				C659FF1E24DE81AC0093BBC1 /* SceneDelegate.swift */,
+				C67F9C7624E16DC300C21388 /* GoogleService-Info.plist */,
 				C659FF2024DE81AC0093BBC1 /* ViewController.swift */,
 				C659FF2224DE81AC0093BBC1 /* Main.storyboard */,
 				C659FF2524DE81AD0093BBC1 /* Assets.xcassets */,
 				C659FF2724DE81AD0093BBC1 /* LaunchScreen.storyboard */,
 				C659FF2A24DE81AD0093BBC1 /* Info.plist */,
+				C681E4F924E15F220061B7B7 /* KartViewController.swift */,
 			);
 			path = LoginFenster;
+			sourceTree = "<group>";
+		};
+		D2365DD5E71E17AF2F5ACAAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FBA27838EF5CC58A6B0726E /* Pods_LoginFenster.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C659FF2D24DE81AD0093BBC1 /* Build configuration list for PBXNativeTarget "LoginFenster" */;
 			buildPhases = (
+				93F4E4BD3055883CDB519565 /* [CP] Check Pods Manifest.lock */,
 				C659FF1524DE81AC0093BBC1 /* Sources */,
 				C659FF1624DE81AC0093BBC1 /* Frameworks */,
 				C659FF1724DE81AC0093BBC1 /* Resources */,
+				A993CB7BE53446D4A56685A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67F9C7724E16DC300C21388 /* GoogleService-Info.plist in Resources */,
 				C659FF2924DE81AD0093BBC1 /* LaunchScreen.storyboard in Resources */,
 				C659FF2624DE81AD0093BBC1 /* Assets.xcassets in Resources */,
 				C659FF2424DE81AC0093BBC1 /* Main.storyboard in Resources */,
@@ -133,11 +168,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		93F4E4BD3055883CDB519565 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoginFenster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A993CB7BE53446D4A56685A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginFenster/Pods-LoginFenster-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginFenster/Pods-LoginFenster-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginFenster/Pods-LoginFenster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C659FF1524DE81AC0093BBC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C681E4FA24E15F220061B7B7 /* KartViewController.swift in Sources */,
 				C659FF2124DE81AC0093BBC1 /* ViewController.swift in Sources */,
 				C659FF1D24DE81AC0093BBC1 /* AppDelegate.swift in Sources */,
 				C659FF1F24DE81AC0093BBC1 /* SceneDelegate.swift in Sources */,
@@ -282,16 +360,18 @@
 		};
 		C659FF2E24DE81AD0093BBC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6FF5BEFFF31BCAD0128100 /* Pods-LoginFenster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LoginFenster/LoginFenster.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X7M7Q43Z6G;
+				DEVELOPMENT_TEAM = 6L7FR2BQJ9;
 				INFOPLIST_FILE = LoginFenster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NFCTronik.LoginFenster;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NFCTronik.Version1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,16 +380,18 @@
 		};
 		C659FF2F24DE81AD0093BBC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 388BBEB3A83D17CC50DEFC11 /* Pods-LoginFenster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LoginFenster/LoginFenster.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X7M7Q43Z6G;
+				DEVELOPMENT_TEAM = 6L7FR2BQJ9;
 				INFOPLIST_FILE = LoginFenster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NFCTronik.LoginFenster;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NFCTronik.Version1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

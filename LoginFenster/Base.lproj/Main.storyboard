@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,169 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginFenster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <userGuides>
+                            <userLayoutGuide location="16" affinity="minX"/>
+                            <userLayoutGuide location="398" affinity="minX"/>
+                        </userGuides>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9vY-KR-ZYL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mercedes-4120204_1280" translatesAutoresizingMaskIntoConstraints="NO" id="F4M-Ar-8xD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="7V9-4Y-wxk"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="5Nk-dt-YRg">
+                                        <rect key="frame" x="0.0" y="136" width="414" height="281.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAIMLER AG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXr-zj-Qmm">
+                                                <rect key="frame" x="16" y="8" width="382" height="34.5"/>
+                                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="FjG-hR-au5">
+                                                <rect key="frame" x="16" y="93.5" width="382" height="97"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Benutzer-ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJ7-Vw-rIf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="Ph9-FD-fkh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passwort" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wTk-4k-YEs">
+                                                        <rect key="frame" x="0.0" y="65" width="382" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THc-aO-JOm">
+                                                <rect key="frame" x="16" y="241.5" width="382" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="38Y-yX-lX2"/>
+                                                </constraints>
+                                                <state key="normal" title="Anmelden">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MvV-dC-BNY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" verticalHuggingPriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="XUX-c2-n6M">
+                                        <rect key="frame" x="0.0" y="425.5" width="414" height="392.5"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9vY-KR-ZYL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5X5-Ob-XQg"/>
+                            <constraint firstItem="9vY-KR-ZYL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KKb-7u-YgD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9vY-KR-ZYL" secondAttribute="trailing" id="XWw-wG-v6Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9vY-KR-ZYL" secondAttribute="bottom" id="xmh-4s-tOT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="benutzerID" destination="EJ7-Vw-rIf" id="0yf-dP-3p5"/>
+                        <outlet property="passwort" destination="wTk-4k-YEs" id="gnh-1k-7Va"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Kart View Controller-->
+        <scene sceneID="1Kf-w3-8Y7">
+            <objects>
+                <viewController storyboardIdentifier="kart_VC" id="dXu-pc-KNL" customClass="KartViewController" customModule="LoginFenster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ky0-xu-FvG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCa-6E-oe8">
+                                <rect key="frame" x="16" y="253" width="382" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Whitescreen" translatesAutoresizingMaskIntoConstraints="NO" id="oWg-83-h6S">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="200"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passfoto" translatesAutoresizingMaskIntoConstraints="NO" id="jpS-27-Ppb">
+                                        <rect key="frame" x="296" y="16" width="70" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="JRL-qv-clW"/>
+                                            <constraint firstAttribute="width" constant="70" id="XJI-Aw-JHO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAIMLER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz2-Lg-5YT">
+                                        <rect key="frame" x="16" y="16" width="143.5" height="34.5"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MUSTERMANN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4C-4s-gXd" userLabel="row2">
+                                        <rect key="frame" x="16" y="164" width="122.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbW-9l-L4y" userLabel="row1">
+                                        <rect key="frame" x="16" y="139.5" width="37.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6vb-3c-pKm"/>
+                                    <constraint firstItem="Q4C-4s-gXd" firstAttribute="top" secondItem="cbW-9l-L4y" secondAttribute="bottom" constant="4" id="791-3b-EUb"/>
+                                    <constraint firstItem="Q4C-4s-gXd" firstAttribute="leading" secondItem="oCa-6E-oe8" secondAttribute="leading" constant="16" id="Io8-vN-oMB"/>
+                                    <constraint firstItem="oWg-83-h6S" firstAttribute="top" secondItem="oCa-6E-oe8" secondAttribute="top" id="KMS-jt-8fN"/>
+                                    <constraint firstAttribute="trailing" secondItem="jpS-27-Ppb" secondAttribute="trailing" constant="16" id="S8K-Xp-yVk"/>
+                                    <constraint firstItem="lz2-Lg-5YT" firstAttribute="top" secondItem="oCa-6E-oe8" secondAttribute="top" constant="16" id="XrC-gY-2kV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Q4C-4s-gXd" secondAttribute="bottom" constant="16" id="bcr-Ry-HUI"/>
+                                    <constraint firstAttribute="trailing" secondItem="oWg-83-h6S" secondAttribute="trailing" id="ghs-8O-HUK"/>
+                                    <constraint firstItem="oWg-83-h6S" firstAttribute="leading" secondItem="oCa-6E-oe8" secondAttribute="leading" id="hEB-9T-KTR"/>
+                                    <constraint firstAttribute="bottom" secondItem="oWg-83-h6S" secondAttribute="bottom" id="jgO-sR-yi0"/>
+                                    <constraint firstItem="jpS-27-Ppb" firstAttribute="top" secondItem="oCa-6E-oe8" secondAttribute="top" constant="16" id="n5a-Hv-hSy"/>
+                                    <constraint firstItem="lz2-Lg-5YT" firstAttribute="leading" secondItem="oCa-6E-oe8" secondAttribute="leading" constant="16" id="svL-q9-s3j"/>
+                                    <constraint firstItem="cbW-9l-L4y" firstAttribute="leading" secondItem="oCa-6E-oe8" secondAttribute="leading" constant="16" id="vC6-rW-rrO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="oCa-6E-oe8" firstAttribute="centerX" secondItem="D2W-LB-hqJ" secondAttribute="centerX" id="GCw-pS-ltW"/>
+                            <constraint firstItem="D2W-LB-hqJ" firstAttribute="trailing" secondItem="oCa-6E-oe8" secondAttribute="trailing" constant="16" id="KqO-rk-mdF"/>
+                            <constraint firstItem="oCa-6E-oe8" firstAttribute="centerY" secondItem="D2W-LB-hqJ" secondAttribute="centerY" constant="-100" id="aPj-fw-9Eq"/>
+                            <constraint firstItem="oCa-6E-oe8" firstAttribute="leading" secondItem="D2W-LB-hqJ" secondAttribute="leading" constant="16" id="vtu-97-a5t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D2W-LB-hqJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYR-QM-nIu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098.5507246376812" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Whitescreen" width="1500" height="500"/>
+        <image name="mercedes-4120204_1280" width="1280" height="762"/>
+        <image name="passfoto" width="393" height="531"/>
+    </resources>
 </document>
