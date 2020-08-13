@@ -8,16 +8,26 @@
 
 import UIKit
 import CoreNFC
+import FirebaseCore
+import FirebaseFirestore
+
 class KartViewController: UIViewController, NFCNDEFReaderSessionDelegate {
-    
+    var vornamen_Array = [String]()
+    var vorname = ""
+    var finalBenutzerName = "dd"
     var session: NFCNDEFReaderSession?
     var TheActualMessage = "MaxMustermann2"
-    
+    var db: Firestore!
     let newLayer = CAGradientLayer()
     
+    @IBOutlet weak var nachnameView: UILabel!
+    @IBOutlet weak var vornameView: UILabel!
     override func viewDidLoad() {
+       
         super.viewDidLoad()
-
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        db = Firestore.firestore()
         newLayer.colors = [UIColor.init(red: (5/255), green: (105/255), blue: (127/255), alpha: 1.0).cgColor,
                            UIColor.init(red: (6/255), green: (136/255), blue: (164/255), alpha: 1.0).cgColor]
         newLayer.frame = view.frame
@@ -25,10 +35,30 @@ class KartViewController: UIViewController, NFCNDEFReaderSessionDelegate {
         view.layer.addSublayer(newLayer)
         newLayer.anchorPointZ=1
         print("Ich war hier")
-        session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: true)
-        session?.alertMessage = "Hold your Iphone near an NDEF Tag"
-        session?.begin()
+        print("BenutzerName: " + finalBenutzerName)
+        db.collection("user").addSnapshotListener { (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("No Document")
+                return
+            }
+            self.vornamen_Array.append(  contentsOf: documents.map { (queryDocumentSnapshot) -> String in
+                let data = queryDocumentSnapshot.data()
+                let vorname = data["Vorname"] as? String ?? "Leer"
+                let nachname = data["Nachname"] as? String ?? "Leer"
+                let id = data["ID"] as? String ?? "Leer"
+                self.vornameView.text = vorname.uppercased()
+                self.nachnameView.text = nachname.uppercased()
+                self.TheActualMessage = id
+                return vorname
+            })
+        }
+    }
     
+    
+    @IBAction func but(_ sender: Any) {
+        session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: true)
+               session?.alertMessage = "Hold your Iphone near an NDEF Tag"
+               session?.begin()
     }
     override open var shouldAutorotate: Bool{
         return false

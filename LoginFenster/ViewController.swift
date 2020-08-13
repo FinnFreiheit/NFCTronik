@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 class ViewController: UIViewController {
-
+    var benutzerName = ""
     let newLayer1 = CAGradientLayer()
     
     @IBOutlet weak var benutzerID: UITextField!
@@ -37,6 +37,8 @@ class ViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "kart_VC") as? KartViewController else{
             return
         }
+        self.benutzerName = benutzerID.text!
+        performSegue(withIdentifier: "karte", sender: self)
         present(vc,animated: true)
         
     }
@@ -67,6 +69,11 @@ class ViewController: UIViewController {
     
     }
     
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           var vc = segue.destination as! KartViewController
+           vc.finalBenutzerName = self.benutzerName
+       }
    
 
 }
